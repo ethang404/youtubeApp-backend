@@ -48,7 +48,7 @@ app.get("/test", function (req, res) {
 //Still a bit confused on why this much abstraction, and what Model does exactly.
 //--model defines schema, I can have a ./config/database.js to establish connection with mySQl + sequelize
 //I will forgo Service I think and just have controller
-
-app.listen(8000, () => {
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
 	console.log("Server running on port 8000");
 });
